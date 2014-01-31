@@ -1,0 +1,145 @@
+body {
+	background-color: #f8f8ff;
+	margin: 0;
+	font-family: "Segoe UI";
+}
+
+/* === HEADERS === */
+h1,h2,h3 {
+	font-family: "Segoe UI Light";
+	
+}
+
+h1 {
+	padding-left: 36px;
+	font-size: 250%;
+	margin-top: 24px;
+	margin-bottom: 4px;
+	letter-spacing: 3px;
+}
+
+h2 {
+	color: #ffffff;
+	letter-spacing: 3px;
+}
+
+h3 {
+
+}
+
+blockquote, blockquote a {
+	font-style: italic;
+	color: #bdbdbd;
+}
+
+blockquote a {
+	text-decoration: none;
+	color: #cdcded;
+}
+
+blockquote a:hover {
+	color: #eeeefd;
+}
+
+span.accents {
+	color: #dddddd;
+}
+span.accents2{
+	color: red;
+	font-weight: bold;
+}
+a.accents {
+	color: red;
+}
+
+input {
+	border: 1px solid #fff;
+}
+
+/* --- NAV --- */
+
+.navButton {
+	background-color: #dd3344;
+	padding: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.navButton:hover {
+	background-color: #ed4354;
+	color: #ffffff;
+}
+
+.navButton:active {
+	background-color: #cd2334;
+}
+
+.navButton:visited{
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #cccccc;
+}
+
+a:active {
+	text-decoration: none;
+	color: #bbbbbb;
+}
+
+nav ul {
+	padding-top: 2px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+nav ul li {
+	list-style: none; /* Get rid of bullet points */
+	padding: 2px;
+	float: left;
+}
+
+/* --- HEADER --- */
+header {
+	background-color: #ffffff;
+	padding-left: 29px;
+}
+
+/* --- FOOTER --- */
+footer.pageEnd {
+	background-color: #01014f;
+	color: #ffffff;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 28px;
+}
+
+footer.pageEnd a {
+	color: #bbbbcd;
+}
+
+.subscribe input[type=email] {			
+	width: 300px;
+	height: 26px;
+	font-size: 16px;
+	padding-left: 5px;
+	border: none;
+	border-radius: 1px;
+	transition: all .4s; 
+}
+
+.subscribe input[type=email]:focus {
+	width: 400px;  
+	box-shadow: 2px 2px 2px 2px;
+	transition: all .4s;
+}
+
+footer address {
+	padding-top: 10px;
+}
