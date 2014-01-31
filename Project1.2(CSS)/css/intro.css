@@ -1,0 +1,81 @@
+
+
+/* --- BODY AND NAV --- */
+
+body {
+	background-color: #f8f8ff;
+	font-family: "Segoe UI";
+	margin: 0;
+}
+
+.navButton {
+	background-color: #dd3344;
+	padding: 10px;
+}
+
+a.navButton {
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #cccccc;
+}
+
+a:active {
+	text-decoration: none;
+	color: #bbbbbb;
+}
+
+nav ul {
+	padding-top: 2px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+nav ul li {
+	list-style: none; /* Get rid of bullet points */
+	padding: 2px;
+	float: left;
+}
+
+/* --- HEADER --- */
+header {
+	background-color: #ffffff;
+	padding-left: 29px;
+}
+
+
+/* --- ARTICLE --- */
+
+h1 {
+	font-size: 175%;
+}
+
+article {
+	padding-left: 24px;
+	max-width: 900px;
+}
+
+/* --- SECTIONS --- */
+
+h2 {
+	color: #7789ef;
+}
+
+section {
+	border-top: 1px solid black;
+	min-height: 200px;
+}
+
+blockquote {
+	background-color: #f3f3fc;
+	border-top: 1px solid #222222;
+	max-width: 350px;
+	padding: 10px;
+}
