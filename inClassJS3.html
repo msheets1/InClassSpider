@@ -1,0 +1,251 @@
+
+<!-- DOM AND BOM -->
+<!-- 5 FEB 2014 -->
+<html>
+	<head>
+		<style>
+		#outer {
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		#inner {
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		#target {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		#target:hover {
+		
+		}
+		</style>
+	</head>
+	<body>
+		<section>
+			<!--
+			<div id="outer">
+				<div id="inner">
+					<div id="target"></div>
+				</div>
+			</div>
+			-->
+			
+			<script>
+					/*
+					
+					(1)  
+					
+					
+					var outer = document.getElementById('outer');
+					var inner = document.getElementById('inner');
+					var target = document.getElementById('target');
+
+					var callback = function (event) {
+						console.log(this);
+						event.stopPropagation(); // This will prevent innerDivs from propagating up to parent divs.
+					}					
+					
+					outer.addEventListener('click', callback);
+					inner.addEventListener('click', callback);
+					target.addEventListener('click', callback);
+					*/
+			</script>
+		</section>
+		
+		<section>
+			<!--
+			<form action="/endpoint">
+				<input id="input" type="text" />
+				<input id="submit" type="submit" value="Submit!" />
+			</form>
+			-->
+			<script>
+				/*
+				
+				(2) 
+				
+				
+				var input = document.getElementById('input');
+				var submit = document.getElementById('submit');
+				submit.addEventListener('click', function(evt) {
+					if(!input.value.length) {
+						alert("You're missing something");
+						evt.preventDefault();
+						// TODO: Not working
+					}
+				});
+				
+				evt.stopPropagation();
+				
+				
+				*/
+				
+				/*
+				(3)
+				
+				// 3 parts: ecmascript, DOM (Allows you to modify the page), and BOM (Browser Object Model)
+				
+				// BOM!
+				window.location.hostname('http://www.google.com'); // ...stuff
+				window.history.back
+				window.location.hostname
+				alert() // annoying....be careful ;)
+				window.prompt('What is your birthday'); // he'd much rather see this in HTML
+				// interesting...I didn't realize that this was browser-based and not JavaScript based
+				// makes sense though. Duh. :}
+				window.confirm('Are you sure you want to leave?')
+				
+				// SETTING COOKIES!!!!
+				document.cookie // Seems like this is basically one big cookie with chips appended. ;)
+				// Allow us to preserve state. :)
+				document.cookie = 'myCoolCookie=Awesomeness';
+				document.cookie.split(';')
+				clear()
+				
+				window.screenX //How far over you are scrolled
+				window.screenY
+				window.screen //screensize?
+				window.scrollTo(0,500) // Scrolls you to x=0, y=500
+				//? TODO: And how do we do that smoothly? Prob jQuery. :)
+				
+				
+				window.onresize = function (evt) {
+					console.log(evt);
+				}
+				// Okay, so this is firing a kajillion times!
+				// I only want it once...A good usecase for set timeouts
+				// if they haven't re-rendered in 100ms, do it now
+				// fire this event if this hasn't happened in {time}
+				
+				//window.onmousemove
+				
+				window.onload = function () {
+				
+				}
+				window.onbeforeunload = function () {
+					if (confirm('Are you sure you want to leave?')){
+						evt.preventDefault();
+					}
+					// Chrome doesn't allow this...
+				}
+				
+				// Navigator
+				
+				var browserInfo = window.navigator.userAgent // navig. gets us info about the browser itself)
+				console.log(browserInfo);
+				// ** Seth: You shouldn't do this now... //
+				// TODO: I need to learn to use 	
+				// parseInt...parseFloat...this all comes from the Browser... @_@
+				
+				*/
+				
+				/*
+				(4)
+				
+				var myArray = [23,25,655,12,45,90,55];
+				var sortedArray = myArray.sort(function (a,b){
+					return a > b;
+				});	// Interesting...
+				console.log(sortedArray);
+				
+				var filteredArray = myArray.filter(function(a){
+					return a > 20;
+				})
+				console.log(filteredArray);
+				
+				var mappedArray = myArray.map(function(a) {
+					return a + 10;
+				})	
+				console.log(mappedArray);
+				
+				var logicArray = myArray.map(function(a) {
+					if(a<10) {
+						return a + 10;
+					} else {
+						return a;
+					}
+				});
+				console.log(logicArray);
+				
+				var reducedArray = myArray.reduce(function(a,b){
+					return a + b
+				});
+				console.log(reducedArray); // Will add them all together
+				
+				var otherArray = ['b','ap','other'];
+				otherArray = otherArray.concat(myArray);
+				console.log(otherArray);
+			
+				//var each = myArray.forEach(function(a) {
+				//	
+				//})
+				
+				// So where is altering and where is copying going on???
+				*/
+				
+			</script>
+		</section>
+		<section>
+						
+				<!--
+				(5)
+				
+				// Create a button and textarea
+				// when button is clicked, grab textarea content
+				// append it to new div and include create date
+				
+				// Set up a dev profile to not save cookies, etc. Good to know.
+				
+				-->
+				
+				<textarea id="text">
+				</textarea>
+				<input type="button" id="hitButton" value="Hit Me!"/>
+				<div id="firstDiv">
+				</div>
+				<script>
+					var hitButton = document.getElementById("hitButton");
+					var hitButtonFunction = function () {
+						var textValue = document.getElementById("text").value;
+						var timeStamp = new Date();
+						// if you do new Date().getTime()...it returns ms since sometime in 1970.
+						var textToAppend = textValue + " : " + timeStamp;
+						console.log(textToAppend);
+						
+						var newDiv = document.createElement('div');
+						newDiv.innerText = textToAppend;
+						document.getElementById('firstDiv').appendChild(newDiv);
+					};
+					
+					hitButton.addEventListener('click',hitButtonFunction);
+				</script>
+				
+		</section>		
+		<section>
+		
+			
+			<!--
+			
+			var myDiv = document.getElementById('IdOfADiv');
+			
+			// WORST WAY: <div onclick="function(){}"></div>
+			// NEXT WORST: myDiv.onclick = function () {} // This has much better abstraction
+			
+			// BEST!!  // This method can have multiple functions?
+			var onClickFunction = function () {};
+			myDiv.addEventListener('click', onClickFunction);
+			myDiv.addEventListener('click', function(){});
+			
+			#/addSomething
+			
+			myDiv.removeEventListener('click');
+			
+			-->
+		</section>
+	
+	</body>
+</html>

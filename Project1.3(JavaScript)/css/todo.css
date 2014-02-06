@@ -80,9 +80,10 @@ very interesting, indeed... */
 	background-color: #ffeeee;
 	cursor: pointer;
 	transition: all .1s;
+	border-radius: 22px;
 }
 .cssSquare:active {
-	background-color: #ffa202;
+	background-color: #ffffff;
 	transition: all .6s;
 }
 
