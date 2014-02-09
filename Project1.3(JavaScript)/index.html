@@ -3,24 +3,13 @@
 	<head>
 		<title>Meeting Angular</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/all.css">
-		<link rel="stylesheet" href="css/intro.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/todo.css">
 	</head>
 	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a class="navButton" href="index.html">Intro</a></li>
-					<li><a class="navButton" href="timer.html">JavaScript Timer</a></li>
-					<li><a class="navButton" href="angular.html">Examples</a></li>
-					<li><a class="navButton" href="http://angularjs.org" target="_blank">AngularJS.org</a></li>
-				</ul>
-			</nav>
-			<a href="index.html"><img src="css/img/AngularJS-large.png" /></a>
-		</header>
 		<article id='meetingAngular'>
-			<h1>MEETING ANGULAR</h1>
-			<section>
+			<h1>Meeting Angular</h1>
+			<section class='AngClear'>
 				<h2>SO WHAT EXACTLY IS ANGULAR?</h2>
 				<p>Per our friend, <a href="http://en.wikipedia.org/wiki/AngularJS" class="accents" target="_blank">Wikipedia</a>
 				, "AngularJS is an open-source JavaScript framework maintained by Google, 
@@ -33,7 +22,7 @@
 				This makes it easy to have quick turnaround with inputs on forms--without even touching the server,
 				users can keep getting work done and dynamic updates can happen instantly</p>
 			</section>
-			<section>
+			<section class='AngBlue'>
 				<h2>ANGULAR DIRECTIVES</h2>
 				<p>In order to effect its powers on native HTML elements, AngularJS makes use of "Directives".</p>
 				<p>I've listed below the directives used in my <a href="angular.html" class="accents">examples</a>
@@ -74,7 +63,7 @@
 				</p>
 	
 			</section>
-			<section>
+			<section class='AngDarkBlue'>
 				<h2>SEE MORE</h2>
 				<ul>
 					<li><a href="http://coding.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/">Angular and other MVC Frameworks</a></li>
@@ -83,37 +72,11 @@
 					<li><a href="http://en.wikipedia.org/wiki/AngularJS">Angluar: Wikipedia</a></li>
 				</ul>
 			</section>
-			
-			<section>
-				<h2>TODO: JAVASCRIPT</h2>
-				<p>Okay, here's what I need to get done for JavaScript</p>
-				<p>
-					<span class="accents2">Header/Footer Injection</span>: Normally when developing a website, you will have a static header and footer that the server parses along with the content, so there's no need to reduplicate your header and footer in every html file. Since our website has no backend, we don't have that option. But, we can use javascript to inject our header and footer into each page before it fully loads. Reference a javascript file that will dynamically inject your header and footer into each page, as well as update the page's title. This way, you can only write the header/footer once and have it applied to every page.
-				</p>
-				<p>
-					<span class="accents2">Create a Clock, Stopwatch or Timer</span>: Using JavaScript, you will create some functions that will generate html and append it to an html file, or possibly your website. Then, your javascript will update the html element (using setTimeouts or setIntervals) to move the clock forward or keep track of the stopwatch or timer. This will help students learn how to use javascript to dynamically create and update html on the fly.
-				</p>	
-			</section>			
-			
-			
-			
-
- 
-
-
 		</article>
-		<footer class="pageEnd">
-			<div class="subscribe">
-				<form>
-					<input type="email" placeholder="Drop us your email for updates"></input>
-					<input type="submit"></input>
-				</form>
-			</div>
-			<address>
-				You can contact the author, <a href="https://www.facebook.com/matthewdsheets1">Matthew Sheets</a>,
-				at <a href="mailto:matthewsheets1@gmail.com">matthewsheets1@gmail.com</a>.
-			</address>
-		</footer>
 	</body>	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+	
+	<!-- SCRIPTS -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/basic.js"></script>
+	
 </html>

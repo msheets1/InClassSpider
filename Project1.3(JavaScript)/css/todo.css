@@ -1,29 +1,5 @@
 
-/* === SECTIONS === */
-body section {
-	padding-left: 22px;
-	padding-top: 12px;
-	padding-bottom: 24px;
-}
-section.AngBlue {
-	background-color: #b6b6f6;
-}
-section.AngGrey {
-	background-color: #b6b6b6;
-}
 
-section.AngDarkBlue {
-	background-color: #6666a6;
-}
-
-p {
-	max-width: 600px;
-}
-
-section.todoList {
-	background-color: #d6d6d6;
-	max-width: 400px;
-}
 
 ul.todoList {
 	list-style-type: none;
@@ -44,15 +20,9 @@ ul.todoList {
 and change CSS with Angular "commands"....
 very interesting, indeed... */
 
-.toEdge {
-	margin-left: -30px;
-	width: 110%;
-	margin-bottom: -160px;
-	padding-bottom: 0px;
-}
-
-.pageBottom {
-	padding-bottom: 0px;
+section.todoList {
+	background-color: #d6d6d6;
+	max-width: 400px;
 }
 
 .css-red {
@@ -85,8 +55,4 @@ very interesting, indeed... */
 .cssSquare:active {
 	background-color: #ffffff;
 	transition: all .6s;
-}
-
-.clearBoth {
-	clear: both;
 }
