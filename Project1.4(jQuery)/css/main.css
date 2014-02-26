@@ -1,0 +1,237 @@
+/* CONTAINS CSS NECESSARY FOR BASIC FORMATTING OF WEBSITE */
+
+body {
+	background-color: #c8c8ff; /*222244*/
+	margin: 0;
+	font-family: "Segoe UI";
+}
+
+/* === HEADERS === */
+h1 {
+	font-family: "Segoe UI Light";
+	margin-left: 28px;
+}
+h2,h3 {
+	font-family: "Segoe UI Semibold";
+	text-transform: uppercase;
+}
+
+h1 {
+	padding-left: 36px;
+	font-size: 250%;
+	margin-top: 24px;
+	margin-bottom: 4px;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+h2 {
+	color: #f8f8ff;
+	transition: all 200ms;
+	max-width: 600px; /* TODO: make this work better so that, probably, I have a span that is selected by jQuery instead of H2 so that you actually have to be over the text to trigger the hover event */
+}
+
+h2:hover {
+	color: #ffffff;
+	text-shadow: 0 0 5px #ffffff;
+	cursor: pointer;
+	transition: all 200ms;
+}
+
+h2:active {
+	color: #f6f6f6;
+	text-shadow: 0 0 2px #ffffff;
+	cursor: pointer;
+	transition: all 200ms;
+}
+
+h3 {
+
+}
+
+blockquote, blockquote a {
+	font-style: italic;
+	color: #efefef;
+}
+
+blockquote a {
+	text-decoration: none;
+	color: red;
+}
+
+blockquote a:hover {
+	color: #eeeefd;
+}
+
+span.accents {
+	color: #dddddd;
+}
+span.accents2{
+	color: red;
+	font-weight: bold;
+}
+a.accents {
+	color: red;
+}
+
+input {
+	border: 1px solid #fff;
+}
+
+/* --- HEADER AND NAV --- */
+
+header {
+	background-color: #ddddfd;
+	padding-left: 29px;
+}
+
+.navButton {
+	background-color: #dd3344;
+	padding: 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: all 200ms ease-out;
+}
+
+.navButton:hover {
+	background-color: #ed4354;
+	color: #ffffff;
+}
+
+.navButton:active {
+	background-color: #cd2334;
+}
+
+.navButton:visited{
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+	color: #cccccc;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #cccccc;
+}
+
+a:active {
+	text-decoration: none;
+	color: #bbbbbb;
+}
+
+a:visited {
+	
+}
+
+nav ul {
+	padding-top: 2px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+nav ul li {
+	list-style: none; /* Get rid of bullet points */
+	padding: 2px;
+	float: left;
+}
+
+/* === SECTIONS === */
+/*
+article {
+	padding-left: 24px;
+	max-width: 900px;
+}
+*/
+
+body section {
+	padding-left: 42px;
+	padding-top: 12px;
+	padding-bottom: 24px;
+}
+section.AngClear {
+	/* NO ADDITIONAL BACKGROUND-COLOR */
+}
+section.AngBlue {
+	background-color: #b6b6f6;
+}
+section.AngGrey {
+	background-color: #b6b6b6;
+}
+
+section.AngDarkBlue {
+	background-color: #6666a6;
+}
+
+.toEdge {
+	margin-left: -30px;
+	width: 110%;
+	margin-bottom: -160px;
+	padding-bottom: 0px;
+}
+
+.pageBottom {
+	padding-bottom: 0px;
+}
+
+p {
+	max-width: 600px;
+}
+
+.clearBoth {
+	clear: both;
+}
+
+/* --- FOOTER --- */
+footer.pageEnd {
+	background-color: #01013f;
+	color: #ffffff;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 28px;
+}
+
+footer.pageEnd a {
+	color: #bbbbcd;
+}
+
+.subscribe input[type=email] {			
+	width: 300px;
+	height: 26px;
+	font-size: 16px;
+	padding-left: 5px;
+	border: none;
+	border-radius: 1px;
+	transition: all 400ms; 
+}
+
+.subscribe input[type=email]:focus {
+	width: 400px;  
+	box-shadow: 2px 2px 2px 2px;
+	transition: all 400ms;
+	background-color: #dfdfff;
+}
+
+footer address {
+	padding-top: 10px;
+}
+
+.emailSubmitButton {
+	margin-left: 6px;
+	padding: 5px;
+}
+.emailSubmitButton:hover {
+	background-color: #ff2222;
+	transition: all 400ms;
+}
+.emailSubmitButton:focus {
+	background-color: #ff2222;
+	transition: all 400ms;
+	cursor: pointer;
+}
+.emailSubmitButton:active {
+	background-color: #cc1111;
+	cursor: pointer;
+}

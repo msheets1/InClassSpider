@@ -1,0 +1,58 @@
+
+
+
+ul.todoList {
+	list-style-type: none;
+}
+
+.done-false {
+	
+}
+.done-true {
+	color: #eeeeee;
+	text-decoration: line-through; /*Strikethrough...never used it before*/
+	/* I actually really like this kind of coding... fun. :) Maybe. ;) */
+}
+.archived {
+	color: #dfdfdf;
+}
+/* OH! Very interesting....so we can dynamically make names 
+and change CSS with Angular "commands"....
+very interesting, indeed... */
+
+section.todoList {
+	background-color: #d6d6d6;
+	max-width: 400px;
+}
+
+.css-red {
+	background-color: #dd2244;
+}
+
+.css-blue {
+	background-color: #464696;
+}
+
+.css-yellow {
+	background-color: #dd8811;
+}
+
+.cssSquare {
+	float: left;
+	padding: 6px;
+	width: 35px;
+	height: 35px;
+	color: #ffffff;
+	margin: 1px;
+	transition: all 1s;
+}
+.cssSquare:hover {
+	background-color: #ffeeee;
+	cursor: pointer;
+	transition: all .1s;
+	border-radius: 22px;
+}
+.cssSquare:active {
+	background-color: #ffffff;
+	transition: all .6s;
+}

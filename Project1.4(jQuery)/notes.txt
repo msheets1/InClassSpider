@@ -1,0 +1,5 @@
+NOTES
+====================
+- Use the <code> or <pre> elements
+- Use some JSFiddles! I haven't done them before and I think it could be hugely appropriate.
+(I could even do them inside of ColorBox)

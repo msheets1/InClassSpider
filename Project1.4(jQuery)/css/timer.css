@@ -1,0 +1,14 @@
+/* CONTAINS CSS NECESSARY FOR TIMER.HTML */
+
+#warningBoxMessage {
+	padding: 10px 0px;
+}
+#warningBox {
+	display: none;
+	background-color: #ff1111;
+	padding: 16px;
+	margin: 2px;
+	border-radius: 2px;
+	max-width: 60%;
+	box-shadow: 2px 2px 10px #565656;
+}

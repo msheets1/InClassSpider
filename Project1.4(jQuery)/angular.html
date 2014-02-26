@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>Angular Examples</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/todo.css">
+	</head>
+	<body>
+		<article id="examples">
+			<h1>Your First Day with Angular</h1>
+			<section class="AngClear mainSection">
+				<blockquote>
+					<p>So, what do you do when starting to learn a new language? You write with it. And so that's what I did. After sitting down for about an hour with Angular, this page is what I had done.
+					</p>
+					<footer>
+						<p>I owe the first two tutorial widgets to <a href="http://angularjs.org/">Angular.org</a>. The Dance Floor is all mine. ;)</p>
+						<p>At any point, right-click and inspect element to see the code going on behind the scenes. Keep an eye out for "ng-" to know where you've run across Angular directives.</p>
+					</footer>
+				</blockquote>
+			</section>
+			<section class="AngBlue mainSection">
+				<h2>(1) DATABIND YOUR NAME</h2>
+				<section>
+					<p>For the first event, our equivalent to hello world was to build this namebinding example of data binding. Enter your name in the box below to have the webpage cordially greet you.
+					</p>
+					<p>Now we've got you. :)</p>
+				</section>
+				<section>
+					<label>Name:</label>
+					<input type="text" ng-model="yourName" placeholder=" Enter your name">
+					<h3>Hello {{yourName}}!</h3><!-- TODO: What if I want a comma, only when displaying a name? -->
+				</section>
+			</section>
+			<section class="AngGrey mainSection">
+				<h2>(2) MAKE A SHNAZZY TODO LIST</h2>
+				<section>
+					<p>Now that your name is bound to the page, it's time to get to work. The app below takes advantage of the ng-click and ng-repeat commands to do some shnazzy databinding.
+				</section>
+				<div ng-controller="TodoCtrl">
+					<section class="todoList">
+						<span>{{getNumberRemaining()}} of {{todos.length}} tasks remaining. Get to work!</span>
+						<ul class="todoList">
+							<li ng-repeat="todo in todos">
+								<input type="checkbox" ng-model="todo.done">
+								<span class="done-{{todo.done}}">{{todo.text}}</span>
+							</li>
+						</ul>
+						<a href="" ng-click="archive()">Archive Finished Items</a>
+						<hr>
+						<form ng-submit="addTodo()">
+							<input type="text" ng-model="todoText" size="30" placeholder="add new todo here">
+							<input class="btn-primary" type="submit" value="add">
+						</form>
+						<span>In Archive: {{getNumberArchived()}}</span>
+						<!-- FINISH UP
+						<form ng-submit="returnArchived()">
+							<input type="submit" value="Return Archived Items">
+						</form>
+						<ul>
+							<li ng-repeat="todo in archivedTodos">
+								<span class="archived">{{todo.text}}</span>
+							</li>
+						</ul>
+						-->
+					</section>
+					
+					
+				</div>
+				<!-- Thoughts: What's up with the double curly brace? Seems like a lot -->
+				<!-- Another thought: So, it's interesting...I have to think about this like there are actually items hidden somewhere (where, I don't know) that I seek out and destroy, alter, move around, etc. Very interesting, different experience. Is it memory intensive? Probably not more than JavaScript -->
+			</section>
+			<section class="AngDarkBlue pageBottom">
+				<h2>(3) DO A LITTLE DANCE</h2>
+				<p>So, I thought I'd try out something fun on my own...playing with Angular and CSS. Here's the result.
+				</p>
+				<p><span class="accents">To start dancing, move your mouse around and try clicking on the tiles to your favorite dubstep. ;)</span>
+				</p>
+				<blockquote>May I recommend a little
+				<a href="http://www.youtube.com/watch?v=sf6LD2B_kDQ&list=PLXFIULoCnLUHO0Fkxa2pT2uvDvxJgTPC3" target="_blank">Lindsey</a>?
+				</blockquote>
+				<div ng-controller="cssPlayer" class="toEdge">
+					<div ng-repeat="item in items" ng-click="changeCSS()" class="css-{{item.css}} cssSquare"></div>
+				</div>
+				<div class="clearBoth">
+				</div>
+			</section>
+			<!--
+			class="done-{{todo.done}}"
+			-->
+		</article>
+	</body>
+	
+	<!-- SCRIPTS -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/todo.js"></script>
+	<script src="js/sharedHeaderFooter.js"></script>
+	
+</html>
