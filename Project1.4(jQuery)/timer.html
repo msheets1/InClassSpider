@@ -6,32 +6,43 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/todo.css">
 		<link rel="stylesheet" href="css/timer.css">
+		<link rel="stylesheet" href="css/angularRed/jquery-ui-1.10.4.custom.css">
 	</head>
 	<body id="body">
 		<div
 		<article id="examples">
 			<h1>Building a Timer</h1>
-			<section class="AngRed mainSection">
-				<h2>On to the building...</h2>
-				<p><span class="accents2">[Mechanical Voice]:</span></p> 
-				<p>This page will detonate in 10 seconds...</p>
-				<p><span class="accents2">[Normalish Voice]:</span></p>
-				<p>Actually, this page just gives an example of implementing a timer in Javascript.</p>
-				<p>After 10 seconds, the user is prompted to stay on board or abort to Google.</p>
-				<p>Actually, <span class="accents2"><a href="http://www.bing.com">Bing</a></span>. ;)</p>
-			</section>
-			<section>
+			<div id='timerProgressBar' class='uiElements'></div>	
+			<section id="warningBoxSection">
 				<div id="warningBox">
 					<div id="warningBoxMessage"></div>
 					<input type='button' id="stayButton" value='Stay'></input>
 					<input type='button' id="goButton" value='Go!'></input>
 				</div>
 			</section>
+			<section class="AngRed mainSection">
+				<h2 class='alwaysExpanded'>This page will self-destruct in 10 seconds...</h2>
+				<p><span class="roboticSpeech">Prepare for destruction.</span><p>
+				<p><span class="roboticSpeech">The end is coming.</span><p>
+				<p><span class="roboticSpeech">Your utter wasting is imminent.</span><p>
+				<p><span class="roboticSpeech">. . .</span><p>
+				<br/>
+				<p><span class="accents2">[Normalish Voice]:</span></p>
+				<p>Actually, this page just gives an example of implementing a timer in Javascript.</p>
+				<p>After 10 seconds, the user is prompted to stay on board or abort to Google.</p>
+				<p>Well... <a href="http://www.bing.com"><span class="accents">Bing</span></a>. ;)</p>
+			</section>
+			
+			
 		</article>
 	</body>	
 	
 	<!-- SCRIPTS -->
+	<script src="js/angular.min.js"></script>
 	<script src="js/timer.js"></script>
 	<script src="js/sharedHeaderFooter.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/jQueryEffects.js"></script>
 	
 </html>

@@ -1,18 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // TIMER SCRIPT
 
 /* DESCRIPTION
@@ -25,14 +11,14 @@ in HTML to ask me to extend the session or to leave. If I choose to
 extend the session, then the popup will be dismissed and another popup 
 will occur 10 seconds later. Otherwise, redirect the page to www.google.com.
 */
-/*
+
 // ===================================
 // ============ VARIABLES ============
 var TIMEOUTLENGTH = 10000; // 10000ms = 10s
 var timeoutLengthInSeconds = TIMEOUTLENGTH / 1000;
 var redirectTargetURL = "http://bing.com";
 var message = "It's been " + timeoutLengthInSeconds + " seconds...Want to stay here?";
-
+var intervalToKill = null;
 // ===================================
 // ============ FUNCTIONS ============
 
@@ -44,14 +30,31 @@ var atTimerFinish = function () {
 
 // The function to be invoked to initially start the timing process
 // Also adds event listeners to the button elements of the custom confirmation page.
-var startTimerLoop = function () {
 
+var startTimer = function() {
 	setTimeout(atTimerFinish, TIMEOUTLENGTH);
+	var increase = 1;
+	var increaseAmount = 1;
+	
+	intervalToKill = setInterval(function(){
+		$('#timerProgressBar').progressbar({value:increase});
+		console.log(increase);
+		increase += increaseAmount;
+	},99);
+	
+}
+
+var initialStart = function () {
+
+	// initial start
+	startTimer();
 	
 	stayButton.addEventListener('click',function() {
 		if(document.getElementById("warningBox").style.display === 'block') {
+			$('#timerProgressBar').progressbar({value:0});
+			clearInterval(intervalToKill);
 			warningBox.style.display = 'none';
-			setTimeout(atTimerFinish,TIMEOUTLENGTH);
+			startTimer();
 		}
 	});
 	
@@ -74,5 +77,5 @@ var openCustomConfirm = function (message) {
 
 // ==================================
 // START TIMER LOOP ON PAGE LOAD
-window.onload = startTimerLoop;
-*/
+window.onload = initialStart;
+

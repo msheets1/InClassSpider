@@ -5,8 +5,10 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/todo.css">
+		<link rel="stylesheet" href="css/angularRed/jquery-ui-1.10.4.custom.css">
 	</head>
 	<body>
+	
 		<article id='meetingAngular'>
 			<h1>Meeting Angular</h1>
 			<section class='AngClear mainSection'>
@@ -23,7 +25,7 @@
 				users can keep getting work done and dynamic updates can happen instantly</p>
 			</section>
 			<section class='AngBlue mainSection'>
-				<h2>ANGULAR DIRECTIVES</h2>
+				<h2><span>ANGULAR DIRECTIVES</span></h2>
 				<p>In order to effect its powers on native HTML elements, AngularJS makes use of "Directives".</p>
 				<p>I've listed below the directives used in my <a href="angular.html" class="accents">examples</a>
 				to give a little more explanation. Though these directives are used as part of native HTML, they
@@ -75,41 +77,7 @@
 	
 	<!-- SCRIPTS -->
 	<script src="js/angular.min.js"></script>
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
 	<script src="js/sharedHeaderFooter.js"></script>
-	
-	
-	<script>
-	
-		$(function() {
-		
-			// ============= JQUERY USAGE =============
-		
-			// Note to Seth: I've starred things to try to facilitate grading.
-			// It's funny how after using Angular, I'm starting to see *some* (note, **some**)
-			// of it's beauty in returning to jQuery from it.
-		
-			// Selection call by *element* (section) and class (.mainsection)
-			// Also, *manipulation* (changing the CSS of an element: 
-			// I asked Dr. Anderson what this meant and he said that this kind of a change would fit)
-			$('section.mainSection').children('h2').siblings().css({'display':'none'});
-			
-			// Selection call by element (h2) and *class* (.mainSection)
-			$('.mainSection h2:first-child').on('click',function(){ 
-				$(this).siblings().slideToggle('600');
-			});
-			
-			// Selection call by *ID* (#emailSubmitButton; even though I don't like doing this... :)
-			// *Event call* with ".on('click'..."
-			$('#emailSubmitButton').on('click',function() {
-				alert("Thanks for signing up!");
-			});	
-			
-		});
-	
-	</script>
-	
-	
-	
-	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+	<script src="js/jQueryEffects.js"></script>	
 </html>

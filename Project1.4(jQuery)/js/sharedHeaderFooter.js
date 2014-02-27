@@ -20,23 +20,25 @@ var asdf = "<link rel='stylesheet' href='css/all.css'>";
 	// NOTE: I ceased this portion of the project because I was struggling to have CSS load correctly.
 	
 */	
+
 var headerHTML = "<header>" +
 			"<nav>" +
 				"<ul>" +
 					"<li><a class='navButton' href='index.html'>Intro</a></li>" +
+					"<li><a class='navButton' href='angular.html'>Angular Examples</a></li>" +
 					"<li><a class='navButton' href='timer.html'>JavaScript Timer</a></li>" +
-					"<li><a class='navButton' href='angular.html'>Examples</a></li>" +
+					"<li><a class='navButton' href='homeTeaching.html'>jQuery UI Planets</a></li>" +
 					"<li><a class='navButton' href='http://angularjs.org' target='_blank'>AngularJS.org</a></li>" +
 				"</ul>" +
 			"</nav>" +
-			"<a href='index.html'><img id='angularLogo' src='css/img/AngularJS-large.png' /></a>" +
+			"<a href='index.html'><img src='css/img/AngularJS-large.png' /></a>" +
 		"</header>";
 
 var footerHTML = "<footer class='pageEnd'>" +
 			"<div class='subscribe'>" +
 				"<form>" +
 					"<input type='email' placeholder='Drop us your email for updates'></input>" +
-					"<input id='emailSubmitButton' type='submit' class='emailSubmitButton'></input>" +
+					"<input type='submit' class='emailSubmitButton'></input>" +
 				"</form>" +
 			"</div>" +
 			"<address>" +

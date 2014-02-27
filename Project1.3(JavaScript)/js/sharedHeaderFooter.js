@@ -20,12 +20,13 @@ var asdf = "<link rel='stylesheet' href='css/all.css'>";
 	// NOTE: I ceased this portion of the project because I was struggling to have CSS load correctly.
 	
 */	
+
 var headerHTML = "<header>" +
 			"<nav>" +
 				"<ul>" +
 					"<li><a class='navButton' href='index.html'>Intro</a></li>" +
+					"<li><a class='navButton' href='angular.html'>Angular</a></li>" +
 					"<li><a class='navButton' href='timer.html'>JavaScript Timer</a></li>" +
-					"<li><a class='navButton' href='angular.html'>Examples</a></li>" +
 					"<li><a class='navButton' href='http://angularjs.org' target='_blank'>AngularJS.org</a></li>" +
 				"</ul>" +
 			"</nav>" +

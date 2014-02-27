@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/todo.css">
+		<link rel="stylesheet" href="css/angularRed/jquery-ui-1.10.4.custom.css">
 	</head>
 	<body>
 		<article id="examples">
@@ -19,7 +20,7 @@
 					</footer>
 				</blockquote>
 			</section>
-			<section class="AngBlue mainSection">
+			<section class="AngClear mainSection">
 				<h2>(1) DATABIND YOUR NAME</h2>
 				<section>
 					<p>For the first event, our equivalent to hello world was to build this namebinding example of data binding. Enter your name in the box below to have the webpage cordially greet you.
@@ -32,7 +33,7 @@
 					<h3>Hello {{yourName}}!</h3><!-- TODO: What if I want a comma, only when displaying a name? -->
 				</section>
 			</section>
-			<section class="AngGrey mainSection">
+			<section class="AngBlue mainSection">
 				<h2>(2) MAKE A SHNAZZY TODO LIST</h2>
 				<section>
 					<p>Now that your name is bound to the page, it's time to get to work. The app below takes advantage of the ng-click and ng-repeat commands to do some shnazzy databinding.
@@ -70,8 +71,8 @@
 				<!-- Thoughts: What's up with the double curly brace? Seems like a lot -->
 				<!-- Another thought: So, it's interesting...I have to think about this like there are actually items hidden somewhere (where, I don't know) that I seek out and destroy, alter, move around, etc. Very interesting, different experience. Is it memory intensive? Probably not more than JavaScript -->
 			</section>
-			<section class="AngDarkBlue pageBottom">
-				<h2>(3) DO A LITTLE DANCE</h2>
+			<section class="AngDarkBlue pageBottom mainSection">
+				<h2 class=''>(3) DO A LITTLE DANCE</h2>
 				<p>So, I thought I'd try out something fun on my own...playing with Angular and CSS. Here's the result.
 				</p>
 				<p><span class="accents">To start dancing, move your mouse around and try clicking on the tiles to your favorite dubstep. ;)</span>
@@ -95,5 +96,7 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/todo.js"></script>
 	<script src="js/sharedHeaderFooter.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+	<script src="js/jQueryEffects.js"></script>
 	
 </html>

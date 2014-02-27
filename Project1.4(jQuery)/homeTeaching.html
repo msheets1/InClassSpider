@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Meeting Angular</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/todo.css">
+		<link rel="stylesheet" href="css/angularRed/jquery-ui-1.10.4.custom.css">
+	</head>
+	<body>
+		<article id='meetingAngular'>
+			<h1>Using jQuery UI</h1>
+			
+			<section class='AngClear mainSection'>
+			<p>Even the planets don't want to be lonely.</p>
+			<p>Carry the planets to the Sun and watch everyone get happier.</p>
+			</section>
+			<section class='AngSpaceBlue mainSection'>
+			
+				
+			
+				<div class='planet mercury'></div>
+				<div class='planet venus'></div>
+				<div class='planet earth'></div>
+				<div class='planet mars'></div>
+				<div class='planet jupiter'></div>
+				
+				<div class='sun'></div>
+
+				<div class='planet saturn'></div>
+				<div class='planet uranus'></div>
+				<div class='planet pluto'></div>
+				
+				<br/>
+				<blockquote>So, <i>that's</i> what happens when the <a href="http://www.youtube.com/watch?v=55_bV4ORRFM" target="_blank"><span class="accents">stars align</span></a>...</p>
+				
+			</section>
+		</article>
+	</body>	
+	
+	<!-- SCRIPTS -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/sharedHeaderFooter.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+	<script src="js/jQueryEffects.js"></script>	
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	
+	<script>
+	
+		$('.planet').draggable();
+		$('.sun').droppable({
+			drop: function() {
+				$(this).css({
+					'background-color':'#ffaa00',
+					'box-shadow': '0 0 566px #0555ff'
+					});
+			},
+			over: function() {
+				$(this).css({'box-shadow': '0 0 66px #ff5522'});
+			},
+			out: function() {
+				$(this).css({'box-shadow': ''});
+			},
+			activate: function() {
+				$(this).css({'box-shadow': '0 0 240px #ffdddd'});
+			},
+			deactivate: function() {
+				$(this).css({'box-shadow': ''});
+			}
+			
+			
+		});
+	
+	
+	</script>
+	
+	
+</html>
